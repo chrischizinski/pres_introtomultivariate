@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Multivariate Stats</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Multivariate Stats">
+  <meta name="author" content="Christopher Chizinski">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/custom.css"></link>
+<link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Multivariate Stats</h1>
+    <h2></h2>
+    <p>Christopher Chizinski<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Multivariate data</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>Data (biological or sociological) we collect is often complex</p>
+
+<ul>
+<li>5 species = 10 potential correlation</li>
+<li>25 species = 300 potential correlations</li>
+</ul></li>
+<li><p>Multivariate techniques were developed to:</p>
+
+<ul>
+<li>Reduce dimensionality of data</li>
+<li>Explore how multiple variables respond to explanatory variables <em>simultaneously</em></li>
+</ul></li>
+</ul>
+
+  </article>
+  <footer class = 'logo'>
+    <img src = './assets/img/logo.png'></img>
+  </footer>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Structure of multivariate data</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>Array (matrix)</p>
+
+<ul>
+<li>columns = measured variables</li>
+<li>rows = observations</li>
+</ul></li>
+<li><p>Data can be binary, quantitative, qualitative, rank-ordered, or a mixture</p></li>
+<li><p>Many multivariate techniques exist to meet the many types of data and the needs of the researcher</p></li>
+</ul>
+
+  </article>
+  <footer class = 'logo'>
+    <img src = './assets/img/logo.png'></img>
+  </footer>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3">
+<hgroup>
+  <h2>Lots of options</h2>
+</hgroup>
+<article class = 'flexbox vcenter'>
+<p><img src="assets/img/multibox.png" width="800px" /></p>
+
+</article>
+<!-- Presenter Notes -->
+</slide>
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Data transformations</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>Non-categorical data can often benefit from transformations</p>
+
+<ul>
+<li>Ecological and statistical reasons</li>
+</ul></li>
+<li><p>The type of transformation should reflect the science behind the data as well as the method that will be used </p></li>
+<li><p>Data transformations should:</p>
+
+<ul>
+<li>be used to the statistical assumptions of the chosen sampling distribution (e.g., normality, linearity, homogeneity of variances) </li>
+<li>make units comparable when the observations are measured on different scales</li>
+</ul></li>
+</ul>
+
+  </article>
+  <footer class = 'logo'>
+    <img src = './assets/img/logo.png'></img>
+  </footer>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-5" style="background:;">
+  <hgroup>
+    <h2>Data standardizations</h2>
+  </hgroup>
+  <article data-timings="">
+    <p>most common types of standardizations:</p>
+
+<ul>
+<li>relativized (dividing by row or column totals or maximums)</li>
+<li>z-score (subtract the mean of the row or column and dividing by the standard deviation)</li>
+<li>Hellinger (for zero-inflated presence-absence data)</li>
+<li>chord (weights data by rarity)</li>
+</ul>
+
+  </article>
+  <footer class = 'logo'>
+    <img src = './assets/img/logo.png'></img>
+  </footer>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-6" style="background:;">
+  <hgroup>
+    <h2>Distances</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li>is important to represent measurement (i.e. rows) and observations (i.e. columns) in your data set in terms of  resemblance </li>
+</ul>
+
+<ul class = "build incremental">
+<li><p><em>Similarity</em>  ranges from 1 (complete similarity) to 0 (no similarity), is the most common measure of resemblance and considers the number of measurements observations have in common, divided by the total number of measurements taken</p></li>
+<li><p><em>Dissimilarity</em> is the complement to Similarity (dissimilarity = 1 – similarity)</p></li>
+<li><p><em>Distance</em> between measurements can also quantify ecological resemblance</p></li>
+</ul>
+
+  </article>
+  <footer class = 'logo'>
+    <img src = './assets/img/logo.png'></img>
+  </footer>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-7" style="background:;">
+  <hgroup>
+    <h2>Distance (cont)</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul class = "build incremental">
+<li><p>Most common distance measure is Euclidean distance, which uses the Pythagorean Theorem to measure between two points in multidimensional space (rather than geographic space) and is applicable to data of any scale</p></li>
+<li><p>Some multivariate techniques are limited to a single distance measure (i.e., principal component analysis, correspondence analysis) based on the type of data collected, but other techniques are more flexible (i.e., principal coordinate analysis, non-metric multidimensional analysis)</p></li>
+<li><p>Each distance measure has its own strengths and weaknesses that must be considered before choosing an analysis technique </p></li>
+</ul>
+
+  </article>
+  <footer class = 'logo'>
+    <img src = './assets/img/logo.png'></img>
+  </footer>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Multivariate data'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Structure of multivariate data'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='Lots of options'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Data transformations'>
+         4
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=5 title='Data standardizations'>
+         5
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=6 title='Distances'>
+         6
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=7 title='Distance (cont)'>
+         7
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
